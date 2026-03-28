@@ -205,3 +205,5 @@ tile_map_data = PackedByteArray("AAADAP7/AQAAAAAAAAAEAP7/AQAAAAAAAAACAP7/AQAAAAA
 tile_set = SubResource("TileSet_wjtap")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1188095734]
+
+[node name="Node2D" type="Node2D" parent="AnimationPlayer" unique_id=2031132509]
