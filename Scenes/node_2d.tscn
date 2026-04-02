@@ -5,9 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://cw3lk88onj2cr" path="res://ASSets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/world_tileset.png" id="3_6whob"]
 [ext_resource type="PackedScene" uid="uid://chmu5xr7dyvbo" path="res://Scenes/kill_zone.tscn" id="4_6whob"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_j2wod"]
-distance = -205.0
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u7krg"]
 texture = ExtResource("2_hh5uf")
 0:0/0 = 0
@@ -187,23 +184,17 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_u7krg")
 sources/1 = SubResource("TileSetAtlasSource_tx0tn")
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u7krg"]
-distance = 2.276886
-
 [node name="Node2D" type="Node2D" unique_id=2132313521]
 
 [node name="Player" parent="." unique_id=1356678872 instance=ExtResource("1_j2wod")]
 position = Vector2(60, 128)
+collision_layer = 3
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1361746617]
 position = Vector2(-23, -2)
 scale = Vector2(0.9882763, 0.87839776)
 zoom = Vector2(4, 4)
 limit_bottom = 274
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=983833011]
-position = Vector2(64, 2)
-shape = SubResource("WorldBoundaryShape2D_j2wod")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1470087865]
 position = Vector2(38, 176)
@@ -215,9 +206,4 @@ tile_set = SubResource("TileSet_wjtap")
 [node name="Node2D" type="Node2D" parent="AnimationPlayer" unique_id=2031132509]
 
 [node name="Kill Zone" parent="." unique_id=97381748 instance=ExtResource("4_6whob")]
-position = Vector2(39, 126)
-scale = Vector2(0.9882763, 0.87839776)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone" unique_id=1560226548]
-position = Vector2(-23.272842, 162.79642)
-shape = SubResource("WorldBoundaryShape2D_u7krg")
+position = Vector2(218, 158)
