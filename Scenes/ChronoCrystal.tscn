@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://vnxubkuqigsd"]
+
+[ext_resource type="Texture2D" uid="uid://0hhn7jl06mrr" path="res://ASSets/Custom Assets/ChronoCrystal.png" id="1_37rh4"]
+[ext_resource type="Script" uid="uid://blm840udfgdsm" path="res://Scripts/chrono_crystal.gd" id="1_npndr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37rh4"]
+atlas = ExtResource("1_37rh4")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_npndr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37rh4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bgogm"]
+radius = 8.0
+
+[node name="Area2D" type="Area2D" unique_id=503846806]
+collision_mask = 2
+script = ExtResource("1_npndr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1184420609]
+position = Vector2(4.7683716e-07, -9.536743e-07)
+scale = Vector2(0.17382813, 0.16210938)
+sprite_frames = SubResource("SpriteFrames_npndr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1368400664]
+shape = SubResource("CircleShape2D_bgogm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
