@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://d12g63j3mr157"]
 
-[ext_resource type="PackedScene" uid="uid://bpcvnylifc3pk" path="res://player.tscn" id="1_j2wod"]
+[ext_resource type="PackedScene" uid="uid://bpcvnylifc3pk" path="res://Scenes/player.tscn" id="1_j2wod"]
 [ext_resource type="Texture2D" uid="uid://np3lfe5n48b7" path="res://ASSets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/platforms.png" id="2_hh5uf"]
 [ext_resource type="Texture2D" uid="uid://cw3lk88onj2cr" path="res://ASSets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/world_tileset.png" id="3_6whob"]
 [ext_resource type="PackedScene" path="res://Scenes/ChronoCrystal.tscn" id="4_6whob"]
@@ -191,7 +191,7 @@ sources/1 = SubResource("TileSetAtlasSource_tx0tn")
 [node name="Node2D" type="Node2D" unique_id=2132313521]
 
 [node name="Player" parent="." unique_id=1356678872 instance=ExtResource("1_j2wod")]
-position = Vector2(60, 128)
+position = Vector2(71, 128)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1361746617]
 position = Vector2(-23, -2)
