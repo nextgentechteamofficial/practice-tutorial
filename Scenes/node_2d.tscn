@@ -382,7 +382,7 @@ shape = SubResource("WorldBoundaryShape2D_u7krg")
 position = Vector2(-43, -322)
 
 [node name="Player" parent="." unique_id=1356678872 instance=ExtResource("6_wjtap")]
-position = Vector2(-610, -161)
+position = Vector2(55, 131)
 scale = Vector2(1.5398619, 1.5398619)
 speed = 200.0
 
